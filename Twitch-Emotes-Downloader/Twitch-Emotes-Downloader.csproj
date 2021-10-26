@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Twitch_Emotes_Downloader</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>VoHiYo_256px.ico</ApplicationIcon>
+    <Authors>GreenComfyTea</Authors>
+    <Description>Allows to download emotes from twitch, BTTV and FFZ. Made by twitch.tv/GreenComfyTea</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Company>twitch.tv/GreenComfyTea</Company>
+    <PackageProjectUrl>twitch.tv/GreenComfyTea</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\bttvNice.png" />
+    <None Remove="images\TwitchGlitchPurple.png" />
+    <None Remove="images\TwitchGlitchPurple.svg" />
+    <None Remove="images\ZreknarF-white.png" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdonisUI" Version="1.17.1" />
+    <PackageReference Include="AdonisUI.ClassicTheme" Version="1.17.1" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="4.0.0" />
+    <PackageReference Include="SharpVectors" Version="1.7.6" />
+    <PackageReference Include="TwitchLib" Version="3.2.0" />
+    <PackageReference Include="TwitchLib.Api" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.Core" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.Core.Enums" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.Core.Interfaces" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.Core.Models" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.Helix" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.Helix.Models" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.V5" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Api.V5.Models" Version="3.3.0" />
+    <PackageReference Include="TwitchLib.Client" Version="3.2.4" />
+    <PackageReference Include="TwitchLib.Client.Enums" Version="3.2.4" />
+    <PackageReference Include="TwitchLib.Client.Models" Version="3.2.4" />
+    <PackageReference Include="TwitchLib.PubSub" Version="3.2.3" />
+    <PackageReference Include="Utf8Json" Version="1.3.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\bttvNice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\TwitchGlitchPurple.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="images\ZreknarF-white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="images\VoHiYo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="VoHiYo_256px.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
