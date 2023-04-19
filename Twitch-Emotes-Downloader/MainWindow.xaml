@@ -1,0 +1,257 @@
+﻿<Window x:Class="Twitch_Emotes_Downloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Twitch_Emotes_Downloader"
+		xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+		xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI"
+        mc:Ignorable="d"
+		Background="{DynamicResource {x:Static adonisUi:Brushes.Layer0BackgroundBrush}}"
+        Title="Twitch Emotes Downloader v1.0"
+		WindowStartupLocation="CenterScreen"
+		Width="680"
+		Height="680"
+		SizeChanged="WindowSizeChanged">
+	<Window.Style>
+		<Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
+	</Window.Style>
+
+	<ScrollViewer x:Name="outerScrollViewer" Padding="{adonisUi:Space 0}">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition x:Name="row1" Height="Auto" />
+				<RowDefinition x:Name="row2" Height="Auto" />
+				<RowDefinition x:Name="row3" Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<GroupBox Grid.Row="0" Margin="{adonisUi:Space 1, 1, 1, 0}" Padding="{adonisUi:Space 1}">
+				<TextBlock TextWrapping="Wrap" TextAlignment="Center">
+					<Bold>Made by 
+					<Hyperlink NavigateUri="https://twitch.tv/greencomfytea" RequestNavigate="HyperlinkRequestNavigate">GreenComfyTea</Hyperlink> 
+					- 2021</Bold>
+					<LineBreak />
+					<Hyperlink NavigateUri="https://dev.twitch.tv/console/apps/create" RequestNavigate="HyperlinkRequestNavigate">Register an App</Hyperlink> 
+					and use 
+					<Hyperlink NavigateUri="https://twitchapps.com/tokengen/" RequestNavigate="HyperlinkRequestNavigate">Twitch OAuth Token Generator</Hyperlink> 
+					to get ClientID and OAuth Token.
+					<LineBreak />
+					<Bold>Disclaimer</Bold>: Emote and badge images are property of Twitch Interactive or their respective owners. Do not reuse without obtaining their permission. This app is made for education purposes.
+				</TextBlock>
+			</GroupBox>
+
+			<GroupBox Grid.Row="1" Margin="{adonisUi:Space 1, 1, 1, 0}" Padding="{adonisUi:Space 1}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="{adonisUi:Space 1}" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="{adonisUi:Space 1}" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="{adonisUi:Space 1}" />
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="{adonisUi:Space 1}" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="{adonisUi:Space 1}" />
+						<ColumnDefinition Width="{adonisUi:Space 8}" />
+					</Grid.ColumnDefinitions>
+
+					<TextBlock Grid.Row="0" Grid.Column="0" Text="Client ID:" VerticalAlignment="Center" />
+					<TextBox x:Name="clientIdTextBox" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Text="" VerticalAlignment="Center" TextChanged="ClientIdChanged" />
+
+					<TextBlock Grid.Row="2" Grid.Column="0" Text="OAuth Token:" VerticalAlignment="Center" />
+					<TextBox x:Name="oauthTokenTextBox" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Text="" VerticalAlignment="Center" TextChanged="OAuthTokenChanged" />
+
+					<TextBlock Grid.Row="4" Grid.Column="0"  Text="Save to:" TextWrapping="Wrap" VerticalAlignment="Center" />
+					<TextBox x:Name="saveToTextBox" Grid.Row="4" Grid.Column="2" Text="" VerticalAlignment="Center" TextChanged="SaveToChanged" />
+					<Button x:Name="saveToBrowseButton" Grid.Row="4" Grid.Column="4" Content="Browse" VerticalAlignment="Center" Click="SaveToBrowseClick" />
+
+					<TextBlock Grid.Row="6" Grid.Column="0" Text="Channel Name:" VerticalAlignment="Center" />
+					<TextBox x:Name="channelNameTextBox" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" Text="" VerticalAlignment="Center" TextChanged="ChannelNameChanged" />
+				</Grid>
+			</GroupBox>
+
+			<GroupBox Grid.Row="2" Margin="{adonisUi:Space 1, 1, 1, 0}" Padding="{adonisUi:Space 1}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="{adonisUi:Space 1}" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="{adonisUi:Space 1}" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="{adonisUi:Space 1}" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					
+					<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Text="Download:" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" />
+
+					<!-- All -->
+					<GroupBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="{adonisUi:Space 0, 1, 0, 0}" Padding="{adonisUi:Space 1, 0.5, 1, 1}">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="{adonisUi:Space 1}" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+
+							<!-- All -->
+							<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{adonisUi:Space 0, 0, 0, 0.5}">
+								<TextBlock x:Name="allTextBlock" Text="All" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" />
+							</StackPanel>
+							<Separator  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+
+							<!-- Emotes -->
+							<Button x:Name="downloadAllChannelEmotesButton" Grid.Row="3" Grid.Column="0" Content="All Channel Emotes" IsEnabled="true" Click="DownloadAllChannelEmotesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadAllGlobalEmotesButton" Grid.Row="7" Grid.Column="0" Content="All Global Emotes" IsEnabled="false" Click="DownloadAllGlobalEmotesAsyncClick" VerticalAlignment="Center" />
+
+							<!-- Badges -->
+							<Button x:Name="downloadAllChannelBadgesButton" Grid.Row="3" Grid.Column="2" Content="All Channel Badges" IsEnabled="false" Click="DownloadAllChannelBadgesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadAllGlobalBadgesButton" Grid.Row="7" Grid.Column="2" Content="All Global Badges" IsEnabled="false" Click="DownloadAllGlobalBadgesAsyncClick" VerticalAlignment="Center" />
+
+							<!-- Badges -->
+							<Button x:Name="downloadAllChannelEmotesAndBadgesButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="All Channel Emotes and Badges" IsEnabled="false" Click="DownloadAllChannelEmotesAndBadgesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadAllGlobalEmotesAndBadgesButton" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Content="All Global Emotes and Badges" IsEnabled="false" Click="DownloadAllGlobalEmotesAndBadgesAsyncClick" VerticalAlignment="Center" />
+						</Grid>
+					</GroupBox>
+					
+					<!-- Twitch -->
+					<GroupBox Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="3" Margin="{adonisUi:Space 0, 1, 0, 0}" Padding="{adonisUi:Space 1, 0.5, 1, 1}">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="{adonisUi:Space 1}" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+
+							<!-- Twitch -->
+							<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{adonisUi:Space 0, 0, 0, 0.5}">
+								<Image Source="{svgc:SvgImage Source='pack://application:,,,/images/TwitchGlitchPurple.svg'}" RenderOptions.BitmapScalingMode="Fant" Height="{Binding ActualHeight, ElementName=twitchTextBlock}" Margin="{adonisUi:Space 0, 0, 1, 0}" />
+								<!--Image Source="pack://application:,,,/images/TwitchGlitchPurple.svg" RenderOptions.BitmapScalingMode="Fant" Height="{Binding ActualHeight, ElementName=twitchTextBlock}" Margin="{adonisUi:Space 0, 0, 1, 0}" /-->
+								<TextBlock x:Name="twitchTextBlock" Text="Twitch" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" />
+							</StackPanel>
+							<Separator  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+
+							<!-- Emotes -->
+							<Button x:Name="downloadChannelTwitchEmotesButton" Grid.Row="3" Grid.Column="0" Content="Channel Twitch Emotes" IsEnabled="false" Click="DownloadChannelTwitchEmotesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadGlobalTwitchEmotesButton" Grid.Row="5" Grid.Column="0" Content="Global Twitch Emotes" IsEnabled="false" Click="DownloadGlobalTwitchEmotesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadSpecialTwitchEmotesButton" Grid.Row="7" Grid.Column="0" Content="Special Twitch Emotes" IsEnabled="false" Click="DownloadSpecialTwitchEmotesAsyncClick" VerticalAlignment="Center" />
+
+							<!-- Badges -->
+							<Button x:Name="downloadChannelTwitchBadgesButton" Grid.Row="3" Grid.Column="2" Content="Channel Twitch Badges" IsEnabled="false" Click="DownloadChannelTwitchBadgesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadGlobalTwitchBadgesButton" Grid.Row="5" Grid.Column="2" Content="Global Twitch Badges" IsEnabled="false" Click="DownloadGlobalTwitchBadgesAsyncClick" VerticalAlignment="Center" />
+						</Grid>
+					</GroupBox>
+
+					<!-- BTTV -->
+					<GroupBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="{adonisUi:Space 0, 1, 0, 0}" Padding="{adonisUi:Space 1, 0.5, 1, 1}">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="{adonisUi:Space 1}" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+
+							<!-- BTTV -->
+							<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{adonisUi:Space 0, 0, 0, 0.5}">
+								<Image Source="pack://application:,,,/images/bttvNice.png" RenderOptions.BitmapScalingMode="Fant" Height="{Binding ActualHeight, ElementName=bttvTextBlock}" Margin="{adonisUi:Space 0, 0, 1, 0}" />
+								<TextBlock x:Name="bttvTextBlock" Text="BTTV" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" />
+							</StackPanel>
+							<Separator  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+
+							<!-- Emotes -->
+							<Button x:Name="downloadChannelBttvEmotesButton" Grid.Row="3" Grid.Column="0" Content="Channel BTTV Emotes" IsEnabled="false" Click="DownloadChannelBttvEmotesAsyncClick" VerticalAlignment="Center" />
+							<Button x:Name="downloadGlobalBttvEmotesButton" Grid.Row="5" Grid.Column="0" Content="Global BTTV Emotes" IsEnabled="false" Click="DownloadGlobalBttvEmotesAsyncClick" VerticalAlignment="Center" />
+
+							<!-- Badges -->
+							<Button x:Name="downloadGlobalBttvBadgesButton" Grid.Row="5" Grid.Column="2" Content="Global BTTV Badges" IsEnabled="false" Click="DownloadGlobalBttvBadgesAsyncClick" VerticalAlignment="Center" />
+						</Grid>
+					</GroupBox>
+
+					<!-- FFZ -->
+					<GroupBox Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3" Margin="{adonisUi:Space 0, 1, 0, 0}" Padding="{adonisUi:Space 1, 0.5, 1, 1}">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="{adonisUi:Space 1}" />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="{adonisUi:Space 1}" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+
+							<!-- FFZ -->
+							<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{adonisUi:Space 0, 0, 0, 0.5}">
+								<Image Source="pack://application:,,,/images/ZreknarF-white.png" RenderOptions.BitmapScalingMode="Fant" Height="{Binding ActualHeight, ElementName=ffzTextBlock}" Margin="{adonisUi:Space 0, 0, 1, 0}" />
+								<TextBlock x:Name="ffzTextBlock" Text="FFZ" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontSize="16" TextBlock.FontWeight="Bold" />
+							</StackPanel>
+							<Separator  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+
+							<!-- Emotes -->
+							<Button x:Name="downloadChannelFfzEmotesButton" Grid.Row="3" Grid.Column="0" Content="Channel FFZ Emotes" IsEnabled="false" Click="DownloadChannelFfzEmotesAsyncClick" VerticalAlignment="Center" />
+
+							<!-- Badges -->
+							<Button x:Name="downloadChannelFfzBadgesButton" Grid.Row="3" Grid.Column="2" Content="Channel FFZ Badges" IsEnabled="false" Click="DownloadChannelFfzBadgesAsyncClick" VerticalAlignment="Center" />
+						</Grid>
+					</GroupBox>
+				</Grid>
+			</GroupBox>
+
+			<ScrollViewer x:Name="consoleScrollViewer" Grid.Row="4" MinHeight="50" Margin="{adonisUi:Space 1, 1, 1, 1}" Padding="{adonisUi:Space 0}">
+				<TextBox x:Name="consoleTextBox" IsReadOnly="True" TextWrapping="Wrap" />
+			</ScrollViewer>
+		</Grid>
+	</ScrollViewer>
+</Window>
