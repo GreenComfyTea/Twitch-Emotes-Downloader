@@ -31,7 +31,7 @@
 		<img alt="Release Date" src="https://img.shields.io/github/release-date/greencomfytea/twitch-emotes-downloader" />
 	</a>
 	<a href="">
-		<img alt="Platform" src="https://img.shields.io/badge/platform-win%20%7C%20linux%20%7C%20steam%20deck-lightgrey" />
+		<img alt="Platform" src="https://img.shields.io/badge/platform-win-lightgrey" />
 	</a>
 	<a href="">
 		<img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2023" />
