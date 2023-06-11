@@ -1,4 +1,5 @@
 <p align="center">
+	<img alt="Icon" src="https://github.com/GreenComfyTea/Twitch-Emotes-Downloader/assets/30152047/44a7517c-abce-40d6-851f-957b376ae394" />
 	<h2 align="center"><b>Twitch Emotes Downloader</b></h2>
 	<p align="center">Allows to download emotes and badges from <code>Twitch</code>, <code>BTTV</code> and <code>FFZ</code>.</p>
 </p>
