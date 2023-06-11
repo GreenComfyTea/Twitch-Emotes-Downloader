@@ -38,25 +38,6 @@
 		<img alt="Platform" src="https://custom-icon-badges.demolab.com/badge/platform-win x86 | win x64 | win arm32 | osx x64 | linux x64 | linux arm-blue?logo=device-desktop" />
 	</a>
 	<br>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
-		<img alt="Last Commit" src="https://custom-icon-badges.demolab.com/github/last-commit/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
-		<img alt="Commits Since" src="https://custom-icon-badges.demolab.com/github/commits-since/greencomfytea/twitch-emotes-downloader/latest?logo=git-commit" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
-		<img alt="Commits" src="https://custom-icon-badges.demolab.com/github/commit-activity/t/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
-	</a>
-	<br>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
-		<img alt="Commit Activity (Year)" src="https://custom-icon-badges.demolab.com/github/commit-activity/y/greencomfytea/twitch-emotes-downloader?logo=pulse" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
-		<img alt="Commit Activity (Month)" src="https://custom-icon-badges.demolab.com/github/commit-activity/m/greencomfytea/twitch-emotes-downloader?logo=pulse" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
-		<img alt="Commit Activity (Week)" src="https://custom-icon-badges.demolab.com/github/commit-activity/w/greencomfytea/twitch-emotes-downloader?logo=pulse" />
-	</a>
 	<br>
 	<a href="">
 		<img alt="Repo Size" src="https://custom-icon-badges.demolab.com/github/repo-size/greencomfytea/twitch-emotes-downloader?logo=database" />
@@ -79,6 +60,27 @@
 	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/traffic">
 		<img alt="Hits" src="https://custom-icon-badges.demolab.com/endpoint?url=https://hits.dwyl.com/greencomfytea/twitch-emotes-downloader.json?color=blue&logo=eye" />
 	</a>
+	<br>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
+		<img alt="Last Commit" src="https://custom-icon-badges.demolab.com/github/last-commit/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
+		<img alt="Commits Since" src="https://custom-icon-badges.demolab.com/github/commits-since/greencomfytea/twitch-emotes-downloader/latest?logo=git-commit" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
+		<img alt="Commits" src="https://custom-icon-badges.demolab.com/github/commit-activity/t/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
+	</a>
+	<br>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
+		<img alt="Commit Activity (Year)" src="https://custom-icon-badges.demolab.com/github/commit-activity/y/greencomfytea/twitch-emotes-downloader?logo=pulse" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
+		<img alt="Commit Activity (Month)" src="https://custom-icon-badges.demolab.com/github/commit-activity/m/greencomfytea/twitch-emotes-downloader?logo=pulse" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
+		<img alt="Commit Activity (Week)" src="https://custom-icon-badges.demolab.com/github/commit-activity/w/greencomfytea/twitch-emotes-downloader?logo=pulse" />
+	</a>
+	<br>
 	<br>
 	<a href="https://twitch.tv">
 		<img alt="Website" src="https://custom-icon-badges.demolab.com/website?down_color=red&down_message=down&up_color=brightgreen&up_message=up&logo=link&url=https://twitch.tv" />
