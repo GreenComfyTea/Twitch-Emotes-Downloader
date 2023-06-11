@@ -80,6 +80,9 @@
 		<img alt="Hits" src="https://custom-icon-badges.demolab.com/endpoint?url=https://hits.dwyl.com/greencomfytea/twitch-emotes-downloader.json?color=blue&logo=eye" />
 	</a>
 <br>
+	<a href="https://twitch.tv">
+		<img alt="Website" src="https://custom-icon-badges.demolab.com/website?down_color=red&down_message=down&up_color=brightgreen&up_message=up&logo=link&url=https://twitch.tv" />
+	</a>
 	<a href="https://github.com/greencomfytea?tab=followers">
 		<img alt="Followers" src="https://custom-icon-badges.demolab.com/github/followers/greencomfytea?logo=people" />
 	</a>
