@@ -102,7 +102,7 @@
 		<img alt="Open Source" src="https://img.shields.io/badge/open%20source-%20yes-brightgreen?logo=openvpn" />
 	</a>
 	<a href="https://learn.microsoft.com/en-us/dotnet/csharp/">
-		<img alt="Written in" src="https://custom-icon-badges.demolab.com/badge/written in-c%23-953cad?logo=terminal" />
+		<img alt="Written in" src="https://custom-icon-badges.demolab.com/badge/written in-c%23-178600?logo=terminal" />
 	</a>
 </p>
 
