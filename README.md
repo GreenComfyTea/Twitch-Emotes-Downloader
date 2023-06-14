@@ -40,13 +40,13 @@
 	<br>
 	<br>
 	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
+		<img alt="Commits" src="https://custom-icon-badges.demolab.com/github/commit-activity/t/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
 		<img alt="Last Commit" src="https://custom-icon-badges.demolab.com/github/last-commit/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
 	</a>
 	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
 		<img alt="Commits Since" src="https://custom-icon-badges.demolab.com/github/commits-since/greencomfytea/twitch-emotes-downloader/latest?logo=git-commit" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
-		<img alt="Commits" src="https://custom-icon-badges.demolab.com/github/commit-activity/t/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
 	</a>
 	<br>
 	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
