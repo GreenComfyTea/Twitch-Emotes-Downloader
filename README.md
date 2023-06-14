@@ -39,28 +39,6 @@
 	</a>
 	<br>
 	<br>
-	<a href="">
-		<img alt="Repo Size" src="https://custom-icon-badges.demolab.com/github/repo-size/greencomfytea/twitch-emotes-downloader?logo=database" />
-	</a>
-	<a href="">
-		<img alt="Goto Counter" src="https://custom-icon-badges.demolab.com/github/search/greencomfytea/twitch-emotes-downloader/goto?logo=git-compare" />
-	</a>
-	<a href="https://github.com/sponsors/greencomfytea">
-		<img alt="Sponsors" src="https://custom-icon-badges.demolab.com/github/sponsors/greencomfytea?logo=heart" />
-	</a>
-	<a href="https://github.com/GreenComfyTea/twitch-emotes-downloader/watchers">
-		<img alt="Watchers" src="https://custom-icon-badges.demolab.com/github/watchers/greencomfytea/twitch-emotes-downloader?logo=eye" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/forks">
-		<img alt="Forks" src="https://custom-icon-badges.demolab.com/github/forks/greencomfytea/twitch-emotes-downloader?logo=repo-forked" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/stargazers">
-		<img alt="Stars" src="https://custom-icon-badges.demolab.com/github/stars/greencomfytea/twitch-emotes-downloader?logo=star" />
-	</a>
-	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/traffic">
-		<img alt="Hits" src="https://custom-icon-badges.demolab.com/endpoint?url=https://hits.dwyl.com/greencomfytea/twitch-emotes-downloader.json?color=blue&logo=eye" />
-	</a>
-	<br>
 	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/commits/main">
 		<img alt="Last Commit" src="https://custom-icon-badges.demolab.com/github/last-commit/greencomfytea/twitch-emotes-downloader?logo=git-commit" />
 	</a>
@@ -79,6 +57,33 @@
 	</a>
 	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/commit-activity">
 		<img alt="Commit Activity (Week)" src="https://custom-icon-badges.demolab.com/github/commit-activity/w/greencomfytea/twitch-emotes-downloader?logo=pulse" />
+	</a>
+	<br>
+	<br>
+	<a href="">
+		<img alt="Repo Size" src="https://custom-icon-badges.demolab.com/github/repo-size/greencomfytea/twitch-emotes-downloader?logo=database" />
+	</a>
+	<a href="">
+		<img alt="Line Count" src="https://sloc.xyz/github/greencomfytea/twitch-emotes-downloader" />
+	</a>
+	<a href="">
+		<img alt="Goto Counter" src="https://custom-icon-badges.demolab.com/github/search/greencomfytea/twitch-emotes-downloader/goto?logo=git-compare" />
+	</a>
+	<br>
+	<a href="https://github.com/sponsors/greencomfytea">
+		<img alt="Sponsors" src="https://custom-icon-badges.demolab.com/github/sponsors/greencomfytea?logo=heart" />
+	</a>
+	<a href="https://github.com/GreenComfyTea/twitch-emotes-downloader/watchers">
+		<img alt="Watchers" src="https://custom-icon-badges.demolab.com/github/watchers/greencomfytea/twitch-emotes-downloader?logo=eye" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/forks">
+		<img alt="Forks" src="https://custom-icon-badges.demolab.com/github/forks/greencomfytea/twitch-emotes-downloader?logo=repo-forked" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/stargazers">
+		<img alt="Stars" src="https://custom-icon-badges.demolab.com/github/stars/greencomfytea/twitch-emotes-downloader?logo=star" />
+	</a>
+	<a href="https://github.com/greencomfytea/twitch-emotes-downloader/graphs/traffic">
+		<img alt="Hits" src="https://custom-icon-badges.demolab.com/endpoint?url=https://hits.dwyl.com/greencomfytea/twitch-emotes-downloader.json?color=blue&logo=eye" />
 	</a>
 	<br>
 	<br>
